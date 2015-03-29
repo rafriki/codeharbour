@@ -1,0 +1,9 @@
+{
+  "firebase": "codeharbour",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

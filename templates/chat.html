@@ -1,0 +1,18 @@
+<div class="col-md-6 col-md-offset-3">
+	<hr>
+	<p class="lead">You are posting as {{vm.user}}</p>
+	<form class="form" ng-submit="vm.addComment()">
+		<div class="form-group">
+			<input class="form-control" type="text" placeholder="Comment..." required ng-model="vm.comment"></input>
+		</div>
+	</form>
+	<div class="panel panel-default" ng-repeat="comment in vm.comments.slice().reverse()">
+		<div class="panel-heading">
+			<strong>{{comment.author}}</strong>
+			<span class="text-muted pull-right">{{comment.timestamp | date:'medium'}}</span>
+		</div>
+		<div class="panel-body">
+			{{comment.body}}
+		</div>
+	</div>
+</div>
